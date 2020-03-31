@@ -1,1 +1,15 @@
-<h1>Hello World</h1>
+<h1>URL Parameters</h1>
+
+<div id="dragons"></div>
+
+<script>
+  var url = new URL(window.location.href);
+const dragons = document.getElementById("dragons");
+  url.searchParams.forEach((value, key) => {
+    const div = document.createElement("div");
+    const p = document.createElement("p");
+    p.innerText = `${key} = ${value}`;
+div.appendChild(p);
+dragons.appendChild(div);
+})
+</script>
